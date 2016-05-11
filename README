@@ -1,14 +1,20 @@
-Last editted:	March 4th 2015
+Last editted:   March 4th 2015
 
-Executable:		mylocks
-Source file: 	main.c ; main.h ; sync.c ; sync.h ; atomic_ops.h
-Compiling: 		"make" command
-Known bugs:		none
-Purpose:		To test and demonstrate the difference between Pthread Spinlock and Mutex performance
-				Also to compare the differences of Pthread's implementation with my own simple implementation
+Executable:     mylocks
+Source file:    main.c ; main.h ; sync.c ; sync.h ; atomic_ops.h
+Compiling:      "make" command
+Known bugs:     none
 
-Tested on:		Tests were done on a desktop computer with an i7 2700, 4 physical and 8 logical cores
+Purpose:
+    To test and demonstrate the performance difference between:
+    Pthread Spinlock, Pthread Mutex, my spinlock, and my mutex; 
+    Test and set vs. test test and set
 
-Usage:			Compile with "make""
-				Execute with e.g. "./mylocks -t 8 -i 50000 -d 0"
-				The above command executes with 8 threads, 50000 locks and unlocks each thread, and "-d 0" runs every sub-test
+Tested on:
+    Tests were done on a desktop computer with an i7 2700, 4 physical and 8 logical cores
+
+Usage:
+    Compile with "make""
+    Execute with e.g. "./mylocks -t 8 -i 50000 -d 0"
+    The above command executes with 8 threads, 50000 locks and unlocks each thread,
+    and "-d 0" runs every sub-test
